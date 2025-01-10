@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Greenside</title>
+    <link rel="icon" type="image/x-icon" href="/logo2.png">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding-bottom: 100px; /* Espaço reservado para o rodapé fixo */
+        }
+        header, footer {
+            background-color: #079404;
+            color: white;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .navbar-default {
+            background-color: #079404;
+            border-color: #079404;
+        }
+        .navbar-default .navbar-brand, 
+        .navbar-default .navbar-nav > li > a {
+            color: white;
+        }
+        .section_carrossel {
+            margin: 50px 0;
+            text-align: center;
+        }
+        .carousel-inner > .item > img {
+            margin: 0 auto;
+        }
+        .section_servicos, .section_planos, .section_testemunhos, .section_contato {
+            padding: 50px 0;
+        }
+        .section_servicos {
+            background-color: #eafaf1;
+        }
+        .section_planos {
+            background-color: #f4f4f4;
+        }
+        .section_testemunhos {
+            background-color: #eafaf1;
+        }
+        .section_contato {
+            background-color: #f4f4f4;
+        }
+        footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 92px; /* Ajuste a altura conforme necessário */
+    padding: 10px 0; /* Ajuste o padding para compactar mais */
+    background-color: #079404;
+    color: white;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">
+                        <img alt="Greenside" src="/logoMain.png" style="height: 54px; width: 270px; margin-left: 35px; margin-top: -9px;">
+                    </a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/servicos">Serviços</a></li>
+                    <li><a href="/planos">Planos</a></li>
+                    <li><a href="/contato">Contato     http://localhost:3002/erro-inexistente                     </a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/user"><img src="/userIcon.svg" alt="Usuário" style="height: 42px;"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section_carrossel">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="/img1.jpg" alt="Slide 1" style="width:80%;">
+                        <div class="carousel-caption">
+                            <h3>Bem-vindo à Greenside</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/img2.jpg" alt="Slide 2" style="width:80%;">
+                        <div class="carousel-caption">
+                            <h3>Nossos Serviços</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/img3.jpg" alt="Slide 3" style="width:80%;">
+                        <div class="carousel-caption">
+                            <h3>Planos e Benefícios</h3>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </section>
+        <section class="section_servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <p>Descrição dos serviços oferecidos pela clínica.</p>
+            </div>
+        </section>
+        <section class="section_planos">
+            <div class="container">
+                <h2>Nossos Planos</h2>
+                <p>Descrição dos planos e benefícios.</p>
+            </div>
+        </section>
+        <section class="section_testemunhos">
+            <div class="container">
+                <h2>Testemunhos</h2>
+                <p>O que nossos clientes estão dizendo:</p>
+                <blockquote>
+                    <p>"A Greenside transformou minha experiência de saúde."</p>
+                    <footer>- Cliente Satisfeito</footer>
+                </blockquote>
+                <blockquote>
+                    <p>"Serviço de primeira classe e profissionais dedicados."</p>
+                    <footer>- Usuário Contente</footer>
+                </blockquote>
+            </div>
+        </section>
+        <section class="section_contato">
+            <div class="container">
+                <h2>Contato</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Seu email">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea class="form-control" id="mensagem" rows="3" placeholder="Sua mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/logoMain.png" alt="Logo Greenside">
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/servicos">Serviços</a></li>
+                        <li><a href="/planos">Planos</a></li>
+                        <li><a href="/contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><img src="/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="/linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Greenside. Todos os direitos reservados.</p>
+                <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

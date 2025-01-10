@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas - Clínica Greenside</title>
+    <link rel="icon" type="image/x-icon" href="/logo2.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/logoMain.png" alt="Logo Greenside">
+        </div>
+        <nav>
+            <div class="navbarTop">
+                <div class="navbarTop_LinSks">
+                    <ul class="navbarTop_Links_Ul">
+                        <li><a href="/servicos">Serviços</a></li>
+                        <li><a href="/planos">Planos</a></li>
+                        <li><a href="/atendimento">Canal de Atendimento</a></li>
+                        <li><a href="/user"><img src="/userIcon.svg" alt="Usuário"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbarBottom">
+                <div class="searchbar">
+                    <img src="/searchIcon.svg" alt="Pesquisar">
+                    <input type="text" name="searchbar" id="searchbar" placeholder="Pesquisar...">
+                </div>
+                <img src="/menuIcon.svg" alt="Menu" class="menuIcon">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <h1 class="content_Title">Consultas Agendadas</h1>
+            <h2 class="content_Subtitle">Próximas Consultas:</h2>
+            <div style="margin-bottom: 20px;">
+                <a href="/home" class="btn_Voltar">Voltar para Home</a>
+            </div>
+            <div style="display: flex; padding-left: 15px;" class="content_ConsultasAgendadas">
+                <div class="content_Consultas">
+                    <ul>
+                        <% for (const consulta of consultas) { %>
+                        <li class="li_Consulta">
+                            <strong>ID:</strong> <%= consulta.id %>,
+                            <strong>Dia:</strong> <%= consulta.dia %>,
+                            <strong>Horário:</strong> <%= consulta.horario %>
+                            <form action="/cancelar-consulta" method="post" style="display: inline;">
+                                <input type="hidden" name="consultaId" value="<%= consulta.id %>">
+                                <button type="submit" class="btn_Cancelar">Cancelar Consulta</button>
+                                <br>
+                            </form>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
+                <div class="content_FormAgendar">
+                    <h2 class="content_Subtitle">Agendar Nova Consulta:</h2>
+                    <form action="/nova-consulta" method="post">
+                        <label for="dia">Dia:</label>
+                        <input type="date" id="dia" name="dia" required>
+                        <label for="horario">Horário:</label>
+                        <input type="time" id="horario" name="horario" required>
+                        <button type="submit" class="btn_Agendar">Agendar Consulta</button>
+                    </form>
+                </div>
+            </div>
+            <h2 class="content_Subtitle">Histórico de Consultas:</h2>
+            <div class="content_ConsultasHistorico">
+                <ul>
+                    <% for (const consulta of consultas) { %>
+                    <li>
+                        <strong>ID:</strong> <%= consulta.id %>, 
+                        <strong>Dia:</strong> <%= consulta.dia %>, 
+                        <strong>Horário:</strong> <%= consulta.horario %>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/logoMain.png" alt="Logo Greenside">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#atendimento">Canal de Atendimento</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="/linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Greenside. Todos os direitos reservados.</p>
+            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        </div>
+    </footer>
+</body>
+</html>

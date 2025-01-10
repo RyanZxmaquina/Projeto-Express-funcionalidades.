@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio de Documentos</title>
+  <link rel="stylesheet" href="/style-upload.css"> <!-- Adicione um link para o arquivo CSS -->
+</head>
+<body>
+  <div class="upload-container">
+    <h1>Envio de Documentos</h1>
+    <p>Por favor, selecione o documento que deseja enviar. Aceitamos arquivos PDF, DOC, DOCX e imagens.</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <div class="file-input-container">
+        <input type="file" name="file" id="file" class="file-input" />
+        <label for="file" class="file-input-label">Escolher Arquivo</label>
+      </div>
+      <button type="submit" class="submit-button">Enviar Documento</button>
+    </form>
+  </div>
+</body>
+</html>

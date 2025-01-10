@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    line-height: 1.6;
+    background-color: #fff;
+  }
+  
+  .header {
+    text-align: center;
+    background-color: #079404;
+    color: #fff;
+    padding: 2rem;
+    background-image: url('istockphoto-956366756-612x612.jpg'); /* Substitua pelo caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+  }
+  
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    border: 2px solid #079404;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .service-card h2 {
+    color: #079404;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card p {
+    color: #333;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #079404;
+    color: #fff;
+  }
+  

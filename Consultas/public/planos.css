@@ -1,0 +1,133 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+  }
+  
+  /* Fundo dividido */
+  .background {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(90deg, #fff 50%, #079404 50%);
+    min-height: 100vh;
+  }
+  
+  /* Cabeçalho */
+  .header {
+    text-align: left;
+    padding: 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    color: #000;
+  }
+  
+  /* Seção de Planos */
+  .plans {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Cartões */
+  .plan-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 280px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .premium {
+    background-color: #065f02;
+    color: #fff;
+  }
+  
+  /* Cabeçalho do plano */
+  .plan-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .plan-number {
+    background-color: #079404;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .plan-header h2 {
+    font-size: 1.5rem;
+    color: #079404;
+  }
+  
+  .premium .plan-header h2 {
+    color: #fff;
+  }
+  
+  .plan-card ul {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  .plan-card ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Preços */
+  .plan-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #079404;
+  }
+  
+  .premium .plan-price {
+    color: #fff;
+  }
+  
+  /* Botões */
+  button {
+    background-color: #079404;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #065f02;
+  }
+  
+  .premium button {
+    background-color: #fff;
+    color: #065f02;
+  }
+  
+  .premium button:hover {
+    background-color: #e1e1e1;
+    color: #065f02;
+  }
+  
